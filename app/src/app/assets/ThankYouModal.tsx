@@ -22,7 +22,7 @@ const ThankYouModal: React.FC<ThankYouModalProps> = ({ isOpen, onClose }) => {
         </button>
         <h2 className="text-xl font-bold mb-4 text-center">Thank You! Contact Me</h2>
 
-        <div className="flex justify-center items-center text-center text-lime-400">
+        <div className="flex justify-center items-center text-center text-lightBlue">
              <PiSealCheckFill size={100} />
         </div>
 
@@ -31,7 +31,7 @@ const ThankYouModal: React.FC<ThankYouModalProps> = ({ isOpen, onClose }) => {
             <p className='my-1'>Hasitha Dhananjaya will get back to you shortly.</p>
         </div>
         <div className='flex justify-center items-center text-center my-2'>
-            <button type="button" className='px-7 py-2 bg-lime-400 text-white rounded-lg hover:bg-lime-500' onClick={onClose}>Ok</button>
+            <button type="button" className='px-7 py-2 bg-lightBlue text-white rounded-lg hover:bg-hoverPrimary' onClick={onClose}>Ok</button>
         </div>
         
       </div>
