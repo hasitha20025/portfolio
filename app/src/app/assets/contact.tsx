@@ -87,7 +87,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://www.youtube.com/"
+              href="https://www.youtube.com/@hasithatec8975"
               className="text-lightBlue hover:text-hoverPrimary"
               target="_blank"
               rel="noopener noreferrer"

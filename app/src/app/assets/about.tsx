@@ -89,7 +89,7 @@ export default function About() {
               <FaBehanceSquare className="text-2xl" />
             </a>
             <a
-              href="https://www.youtube.com/"
+              href="https://www.youtube.com/@hasithatec8975"
               className="hover:text-lightBlue"
               target="_blank"
             >
