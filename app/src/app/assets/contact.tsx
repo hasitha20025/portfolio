@@ -4,9 +4,9 @@
 import { useState } from 'react';
 import { FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 import emailjs from 'emailjs-com';
+import ThankYouModal from './ThankYouModal'; // Import the ThankYouModal component
 
 const Contact = () => {
-
   const YOUR_SERVICE_ID = 'service_c3gqhwc';
   const YOUR_TEMPLATE_ID = 'template_nfa53g9'; 
   const YOUR_USER_ID = 'bLeKsABKLc4p8a6B5';
@@ -16,6 +16,8 @@ const Contact = () => {
     email: '',
     message: ''
   });
+
+  const [isModalOpen, setModalOpen] = useState(false); // State to control modal visibility
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -30,7 +32,7 @@ const Contact = () => {
     emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formData, YOUR_USER_ID)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        alert('Message sent successfully!');
+        setModalOpen(true); // Show the modal on successful email send
       }, (err) => {
         console.log('FAILED...', err);
         alert('Failed to send message. Please try again later.');
@@ -42,6 +44,10 @@ const Contact = () => {
       email: '',
       message: ''
     });
+  };
+
+  const closeModal = () => {
+    setModalOpen(false); // Close the modal
   };
 
   return (
@@ -143,6 +149,9 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
+      {/* Include the ThankYouModal */}
+      <ThankYouModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
