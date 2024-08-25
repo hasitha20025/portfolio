@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 import emailjs from 'emailjs-com';
 import ThankYouModal from './ThankYouModal'; // Import the ThankYouModal component
+import ErrorModal from './errorModle'; // Import the ErrorModal component
 
 const Contact = () => {
   const YOUR_SERVICE_ID = 'service_c3gqhwc';
@@ -17,7 +18,8 @@ const Contact = () => {
     message: ''
   });
 
-  const [isModalOpen, setModalOpen] = useState(false); // State to control modal visibility
+  const [isModalOpen, setModalOpen] = useState(false); // State to control success modal visibility
+  const [isErrorModalOpen, setErrorModalOpen] = useState(false); // State to control error modal visibility
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -32,10 +34,10 @@ const Contact = () => {
     emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formData, YOUR_USER_ID)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        setModalOpen(true); // Show the modal on successful email send
+        setModalOpen(true); // Show the success modal on successful email send
       }, (err) => {
         console.log('FAILED...', err);
-        alert('Failed to send message. Please try again later.');
+        setErrorModalOpen(true); // Show the error modal on failed email send
       });
 
     // Reset the form
@@ -47,7 +49,11 @@ const Contact = () => {
   };
 
   const closeModal = () => {
-    setModalOpen(false); // Close the modal
+    setModalOpen(false); // Close the success modal
+  };
+
+  const closeErrorModal = () => {
+    setErrorModalOpen(false); // Close the error modal
   };
 
   return (
@@ -150,8 +156,9 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Include the ThankYouModal */}
+      {/* Include the Modals */}
       <ThankYouModal isOpen={isModalOpen} onClose={closeModal} />
+      <ErrorModal isOpenErrorModle={isErrorModalOpen} onCloseErrorModle={closeErrorModal} />
     </div>
   );
 };
