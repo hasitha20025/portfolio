@@ -9,8 +9,8 @@ export default function Experience() {
       <ExperienceCard
         title="Front-End Developer"
         company="Infact Solutions (PVT) Ltd"
-        dates="April/22/2024 - Oct/22/2024"
-        description="I work as a Front-End Developer at Infact Solutions (PVT) Ltd, crafting efficient and dynamic web solutions."
+        dates="April 2024 - Oct 2024"
+        description="Developed responsive and user-friendly web applications using modern frontend technologies including React, TypeScript, and Tailwind CSS. Collaborated with cross-functional teams to deliver high-quality solutions, implemented pixel-perfect UI designs, and optimized application performance for enhanced user experience. Worked on multiple client projects, ensuring code quality and maintaining best practices in web development."
       />
     </>
   );

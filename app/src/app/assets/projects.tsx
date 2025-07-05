@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <>
       <p className="text-3xl font-bold text-center my-6 text-textPrimary">
-        <span className="text-lightBlue">W</span>hy did you{" "}
+        <span className="text-lightBlue">W</span>hy would you{" "}
         <span className="text-lightBlue">H</span>ire me for your{" "}
         <span className="text-lightBlue">N</span>ext Project
         <span className="text-lightBlue">?</span>
