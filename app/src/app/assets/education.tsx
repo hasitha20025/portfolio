@@ -26,5 +26,5 @@ export default function Education() {
         description="I have completed that course."
       />
     </>
-  );
+  ); 
 }

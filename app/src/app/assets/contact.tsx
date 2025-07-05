@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import emailjs from 'emailjs-com';
 import ThankYouModal from './ThankYouModal'; // Import the ThankYouModal component
 import ErrorModal from './errorModle'; // Import the ErrorModal component
@@ -70,13 +70,14 @@ const Contact = () => {
             Do You Have A Project In Your Mind?
           </h3>
           <p className="mb-8 text-sm">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form.
+            I'm passionate about creating innovative web solutions that bring your ideas to life. 
+            Whether you need a modern web application, responsive frontend design, or technical consultation, 
+            I'm here to help transform your vision into reality. Let's collaborate and build something amazing together!
           </p>
           <h4 className="text-2xl font-bold mb-4">Services</h4>
           <ul className="mb-8">
-            <li className="mb-2">✔ Web Development</li>
-            <li className="mb-2">✔ App Development</li>
+            <li className="mb-2">✔ Web Application Development</li>
+            <li className="mb-2">✔ Frontend Development</li>
           </ul>
           <h4 className="text-2xl font-bold mb-4">Follow On</h4>
           <div className="flex space-x-4">
@@ -105,6 +106,16 @@ const Contact = () => {
               rel="noopener noreferrer"
             >
               <FaYoutube size={24} />
+            </a>
+
+            <a
+              href="https://wa.me/+94123456789"
+              className="text-lightBlue hover:text-hoverPrimary"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Chat on WhatsApp"
+            >
+              <FaWhatsapp size={24} />
             </a>
           </div>
         </div>
