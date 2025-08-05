@@ -28,7 +28,7 @@ export default function Projects() {
             <ProjectCard
               projectName="Wall Damage Analysis and Cost estimation project"
               date="July 2025"
-              links="https://wall-damage-analysis-and-cost-estim.vercel.app/"
+              links="https://ai-wall-analysis.vercel.app/"
               description="Professional wall damage detection and cost estimation powered by advanced AI technology"
               githubRepo="https://github.com/hasitha20025/Wall-Damage-Analysis-and-Cost-estimation-project"
               showPreview={true}
@@ -39,6 +39,14 @@ export default function Projects() {
               links="https://ai-chat-web-app.vercel.app/"
               description=" Your intelligent AI assistant powered by Google Gemini. Ask questions, get help, or just chat!"
               githubRepo="https://github.com/hasitha20025/AI-chat-web-app.git"
+              showPreview={true}
+            />
+
+            <ProjectCard
+              projectName="Book Brigade"
+              date="July 2025"
+              links="https://book-brigade.vercel.app/"
+              description="Your personal book assistant powered by AI. Find, recommend, and discuss books effortlessly!"             
               showPreview={true}
             />
 
